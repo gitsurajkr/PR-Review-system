@@ -6,6 +6,7 @@ import LoginCard from './Components/GithubLoginCard/LoginCard'
 import GithubLogin from './Components/GithubLogin/GithubLogin'
 import WebhookCard from './Components/WebhookCard/WebhookCard'
 import Dashboard from './Dashboard/Dashboard'
+import PRCard from './Components/PRCard'
 function App() {
   
 
@@ -14,7 +15,8 @@ function App() {
       {/* <LoginCard /> */}
       {/* <GithubLogin /> */}
       {/* <WebhookCard /> */}
-      <Dashboard />
+      {/* <Dashboard /> */}
+      <PRCard />
     </>
   )
 }
