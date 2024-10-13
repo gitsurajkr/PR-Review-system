@@ -2,7 +2,7 @@ import React from "react";
 import { FaCodePullRequest } from "react-icons/fa6";
 function PRCard() {
     return (
-        <div className="border border-gray-200 border-2 max-w-xs mx:auto rounded-lg shadow-lg bg-white ">
+        <div className="border border-gray-200 border-2 w-full mx:auto rounded-lg shadow-lg bg-white ">
             <div className="flex flex-col">
                 <div className="flex justify-between p-2 ml-2"> 
                     <h1 className="text-lg font-semibold">Total Open PRs</h1>
