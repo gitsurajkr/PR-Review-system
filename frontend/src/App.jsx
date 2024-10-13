@@ -19,12 +19,12 @@ function App() {
       {/* <LoginCard /> */}
       {/* <GithubLogin /> */}
       {/* <WebhookCard /> */}
-      <Dashboard />
+      {/* <Dashboard /> */}
       {/* <PRCard /> */}
       {/* <Header /> */}
       {/* <PRStatusDistributionGraph /> */}
       {/* <TeamPerformance /> */}
-      {/* <PRInfo /> */}
+      <PRInfo />
       {/* <RecentActivities /> */}
     </>
   )

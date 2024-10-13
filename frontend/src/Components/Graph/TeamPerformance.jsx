@@ -30,7 +30,7 @@ const chartConfig = {
 
 const TeamPerformance = () => {
     return (
-        <div className="border-2 border-gray-400 rounded-lg shadow-lg w-full p-3 bg-white">
+        <div className="border border-2 border-gray-200 w-full mx:auto rounded-lg shadow-lg p-3 bg-white">
             <ChartContainer config={chartConfig} className="min-h-[200px] w-full">
                 <BarChart accessibilityLayer data={chartData}>
                     <CartesianGrid vertical={false} />

@@ -3,7 +3,7 @@ import { BarChart } from '@mui/x-charts/BarChart';
 
 const PRStatusDistributionGraph = () => {
   return (
-    <div className="border-2 border-gray-400 rounded-lg shadow-lg w-full p-3 bg-white">
+    <div className="border border-2 border-gray-200 w-full mx:auto rounded-lg shadow-lg p-3 bg-white">
       <h2 className="text-lg font-semibold text-center -mb-4">PR Status Distribution</h2>
       <BarChart
         xAxis={[{ scaleType: 'band', data: ['Group A', 'Group B', 'Group C'] }]}
