@@ -5,6 +5,7 @@ import './App.css'
 import Dashboard from './Page/Dashboard/Dashboard'
 import PRsView from './Page/PRsView/PRsView'
 import Analytics  from './Page/Analytics/Analytics'
+import Setting from './Page/Setting/Setting'
 function App() {
 
   return (
@@ -20,7 +21,8 @@ function App() {
       {/* <PRInfo /> */}
       {/* <RecentActivities /> */}
       {/* <PRsView /> */}
-      <Analytics />
+      {/* <Analytics /> */}
+      <Setting />
     </>
   )
 }
