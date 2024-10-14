@@ -12,7 +12,7 @@ function App() {
       {/* <LoginCard /> */}
       {/* <GithubLogin /> */}
       {/* <WebhookCard /> */}
-      <Dashboard />
+      {/* <Dashboard /> */}
       {/* <PRCard /> */}
       {/* <Header /> */}
       {/* <PRStatusDistributionGraph /> */}
@@ -20,7 +20,7 @@ function App() {
       {/* <PRInfo /> */}
       {/* <RecentActivities /> */}
       {/* <PRsView /> */}
-      {/* <Analytics /> */}
+      <Analytics />
     </>
   )
 }
