@@ -21,9 +21,9 @@ const Setting = () => {
 
     return (
 
-        <div className=" space-y-4">
+        <div className=" space-y-2">
             <Header />
-            <div className='p-2'>
+            <div className='p-3 space-y-4'>
             <h1 className="mb-3 text-2xl font-bold">Settings and Configurations</h1>
             <Card>
                 <CardHeader>

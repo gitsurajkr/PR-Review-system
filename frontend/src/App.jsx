@@ -13,7 +13,7 @@ function App() {
 
   return (
     <>
-      {/* <LoginCard /> */}
+      <LoginCard />
       {/* <GithubLogin /> */}
       {/* <WebhookCard /> */}
       {/* <Dashboard /> */}
@@ -25,7 +25,7 @@ function App() {
       {/* <RecentActivities /> */}
       {/* <PRsView /> */}
       {/* <Analytics /> */}
-      <Setting />
+      {/* <Setting /> */}
     </>
   )
 }
