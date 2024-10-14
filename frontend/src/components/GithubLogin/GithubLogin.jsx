@@ -1,7 +1,7 @@
 import React from "react";
 import { FaGithub } from "react-icons/fa";
 import { FaCodePullRequest } from "react-icons/fa6";
-import InputBox from "./../InputBox";
+import InputBox from "../InputBox";
 
 function GithubLogin() {
     return (

@@ -2,16 +2,9 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import LoginCard from './Components/GithubLoginCard/LoginCard'
-import GithubLogin from './Components/GithubLogin/GithubLogin'
-import WebhookCard from './Components/WebhookCard/WebhookCard'
-import Dashboard from './Dashboard/Dashboard'
-import PRCard from './Components/PRCard'
-import Header from './Components/Header'
-import PRStatusDistributionGraph from './Components/Graph/PRStatusDistributionGraph'
-import TeamPerformance from './Components/Graph/TeamPerformance'
-import PRInfo from './Components/PRInfo'
-import RecentActivities from './Components/RecentActivities'
+import Dashboard from './Page/Dashboard/Dashboard'
+import PRsView from './Page/PRsView/PRsView'
+import Analytics  from './Page/Analytics/Analytics'
 function App() {
 
   return (
@@ -19,13 +12,15 @@ function App() {
       {/* <LoginCard /> */}
       {/* <GithubLogin /> */}
       {/* <WebhookCard /> */}
-      {/* <Dashboard /> */}
+      <Dashboard />
       {/* <PRCard /> */}
       {/* <Header /> */}
       {/* <PRStatusDistributionGraph /> */}
       {/* <TeamPerformance /> */}
-      <PRInfo />
+      {/* <PRInfo /> */}
       {/* <RecentActivities /> */}
+      {/* <PRsView /> */}
+      {/* <Analytics /> */}
     </>
   )
 }

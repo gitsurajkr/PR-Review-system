@@ -1,0 +1,17 @@
+export const MockPullRequests = [
+    { id: 1, title: "Fix bug in user authentication", author: "User A", time: "2 hours ago", status: "Merged" },
+    { id: 2, title: "Add new feature to dashboard", author: "User B", time: "3 hours ago", status: "Open" },
+    { id: 3, title: "Improve performance of API", author: "User C", time: "1 hour ago", status: "Closed" },
+    { id: 4, title: "Update dependencies", author: "User D", time: "4 hours ago", status: "Open" },
+    { id: 5, title: "Refactor codebase", author: "User E", time: "5 hours ago", status: "Merged" },
+    { id: 6, title: "Fix typo in README", author: "User F", time: "30 minutes ago", status: "Open" },
+    { id: 7, title: "Add tests for new feature", author: "User G", time: "2 hours ago", status: "Open" },
+    { id: 8, title: "Remove deprecated code", author: "User H", time: "45 minutes ago", status: "Closed" },
+    { id: 9, title: "Document new API endpoints", author: "User I", time: "3 hours ago", status: "Merged" },
+    { id: 10, title: "Enhance UI/UX for settings page", author: "User J", time: "10 minutes ago", status: "Open" },
+    { id: 11, title: "Setup CI/CD pipeline", author: "User K", time: "1 hour ago", status: "Open" },
+    { id: 12, title: "Create design system documentation", author: "User L", time: "2 hours ago", status: "Merged" },
+    { id: 13, title: "Add localization support", author: "User M", time: "3 hours ago", status: "Closed" },
+    { id: 14, title: "Implement dark mode", author: "User N", time: "5 minutes ago", status: "Open" },
+    { id: 15, title: "Optimize images for faster loading", author: "User O", time: "1 day ago", status: "Merged" },
+];

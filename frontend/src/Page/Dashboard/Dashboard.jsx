@@ -1,10 +1,10 @@
 import React from "react";
-import Header from "../Components/Header";
-import PRCard from "../Components/PRCard";
-import PRStatusDistributionGraph from "../Components/Graph/PRStatusDistributionGraph";
-import TeamPerformance from "../Components/Graph/TeamPerformance";
-import PRInfo from "../Components/PRInfo";
-import RecentActivities from "../Components/RecentActivities";
+import Header from "@/components/Header";
+import PRCard from "@/components/PRCard";
+import PRStatusDistributionGraph from "@/components/Graph/PRStatusDistributionGraph";
+import TeamPerformance from "@/components/Graph/TeamPerformance";
+import PRInfo from "@/components/PRInfo";
+import RecentActivities from "@/components/RecentActivities";
 
 const Dashboard = () => {
     return (
