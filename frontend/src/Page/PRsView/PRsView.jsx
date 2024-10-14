@@ -36,7 +36,7 @@ const PRsView = () => {
         return 'Neutral'
     }
     return (
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 p-4">
+        <div className="bg-black grid grid-cols-1 md:grid-cols-4 gap-4 p-4">
             <Card className="md:col-span-1 p-3 max-h-screen overflow-y-auto"> {/* Set max height and enable scroll */}
                 <CardHeader>
                     <CardTitle>Pull Requests</CardTitle>
@@ -66,7 +66,7 @@ const PRsView = () => {
             </Card>
 
             <div className="md:col-span-3 space-y-4">
-                <h1 className="text-2xl font-bold">{selectedPR.title}</h1>
+                <h1 className="text-white text-2xl font-bold">{selectedPR.title}</h1>
                 <Card>
                     <CardHeader>
                         <CardTitle>Code Changes</CardTitle>

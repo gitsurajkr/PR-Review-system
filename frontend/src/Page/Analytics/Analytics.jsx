@@ -14,8 +14,8 @@ const mockEngagementData = [
 
 const Analytics = () => {
     return (
-        <div className="space-y-4 p-4 ">
-            <h1 className="text-2xl font-bold">User Engagement Matrics</h1>
+        <div className="space-y-4 p-4 bg-black">
+            <h1 className="text-white text-2xl font-bold">User Engagement Matrics</h1>
             <Card>
                 <CardHeader>
                     <CardTitle>Activity Over Time</CardTitle>

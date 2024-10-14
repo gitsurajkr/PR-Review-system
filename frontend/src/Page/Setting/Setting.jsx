@@ -7,21 +7,24 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Switch } from "@/components/ui/switch"
 import { Label } from "@/components/ui/label"
 import { Slider } from "@/components/ui/slider"
-
+import Header from "@/components/Header"
 const Setting = () => {
-    
+
     const [emailNotifications, setEmailNotifications] = useState(true)
     const [pushNotifications, setPushNotifications] = useState(false)
-    const [aiSensitivity, setAiSensitivity] = useState(50)  
+    const [aiSensitivity, setAiSensitivity] = useState(50)
 
 
     const handleSaveSettings = () => {
-      console.log('Saving settings:', { emailNotifications, pushNotifications, aiSensitivity })
+        console.log('Saving settings:', { emailNotifications, pushNotifications, aiSensitivity })
     }
-    
+
     return (
-        <div className="space-y-4 p-4">
-            <h1 className="text-2xl font-bold">Settings and Configurations</h1>
+
+        <div className=" space-y-4">
+            <Header />
+            <div className='p-2'>
+            <h1 className="mb-3 text-2xl font-bold">Settings and Configurations</h1>
             <Card>
                 <CardHeader>
                     <CardTitle>Notification Preferences</CardTitle>
@@ -65,6 +68,7 @@ const Setting = () => {
                     <Button onClick={handleSaveSettings}>Save Settings</Button>
                 </CardContent>
             </Card>
+        </div>
         </div>
     );
 }

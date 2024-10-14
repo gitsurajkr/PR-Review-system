@@ -8,15 +8,15 @@ import RecentActivities from "@/components/RecentActivities";
 
 const Dashboard = () => {
     return (
-        <div className="min-h-screen bg-gray-100">
+        <div className="min-h-screen bg-black">
             <Header />
-            <div className="p-5 grid gap-6 mb-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 w-full">
+            <div className="p-5 grid gap-6 mb-3 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 w-full">
                 <PRCard />
                 <PRCard />
                 <PRCard />
                 <PRCard />
             </div>
-            <div className="p-5 grid gap-6 grid-cols-1 lg:grid-cols-2">
+            <div className="p-3 grid gap-6 grid-cols-1 lg:grid-cols-2">
                 <PRStatusDistributionGraph />
                 <TeamPerformance />
             </div>
