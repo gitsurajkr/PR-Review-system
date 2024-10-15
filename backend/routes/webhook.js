@@ -3,6 +3,9 @@ const router = express.Router();
 const authMiddleware = require('../middleware/authMiddleware'); // Ensure this middleware is in place
 const axios = require('axios');
 const User = require('../models/User'); // Assuming you have a User model
+const cookieParser = require('cookie-parser'); // CHANGED
+
+router.use(cookieParser()); // CHANGED
 
 // Create Webhook
 router.post('/', authMiddleware, async (req, res) => {
@@ -12,12 +15,11 @@ router.post('/', authMiddleware, async (req, res) => {
         return res.status(400).json({ message: 'Repository owner and name are required.' });
     }
 
-    const user = await User.findById(req.user.id);
-    if (!user || !user.githubAccessToken) {
-        return res.status(401).json({ message: 'User not authenticated or token missing.' });
-    }
+    const githubToken = req.cookies.githubToken; // CHANGED: Get the token directly from cookies
 
-    const githubToken = user.githubAccessToken;
+    if (!githubToken) {
+        return res.status(401).json({ message: 'User not authenticated or token missing.' }); // CHANGED
+    }
 
     // Create webhook
     const webhookUrl = process.env.GITHUB_WEBHOOK_URL; // Your ngrok URL should be set here
@@ -32,7 +34,7 @@ router.post('/', authMiddleware, async (req, res) => {
             active: true,
         }, {
             headers: {
-                'Authorization': `Bearer ${githubToken}`,
+                'Authorization': `Bearer ${githubToken}`, // Use the token from cookies
                 'Accept': 'application/vnd.github.v3+json',
             }
         });

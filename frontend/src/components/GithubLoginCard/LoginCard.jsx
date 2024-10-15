@@ -3,9 +3,9 @@ import { FaGithub } from "react-icons/fa";
 
 function LoginCard() {
     const handleLogin = () => {
-        // Redirect to the backend's GitHub OAuth route
+        // Redirect to backend's GitHub OAuth endpoint
         window.location.href = "http://localhost:5000/auth/github";
-    };
+      };
 
     return (
         <div className="flex justify-center items-center min-h-screen bg-black shadow-lg">

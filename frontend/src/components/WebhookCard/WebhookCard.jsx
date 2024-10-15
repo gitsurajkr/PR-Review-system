@@ -1,22 +1,21 @@
-// webhookcard.jsx
 import React, { useState, useEffect } from 'react';
-import { FaGithub } from "react-icons/fa";
+import { useNavigate } from 'react-router-dom'; 
 import Cookies from 'js-cookie';
-import { useNavigate } from 'react-router-dom'; // If using React Router
-import { useLocation } from 'react-router-dom';
+
 const WebhookCard = () => {
   const [repoOwner, setRepoOwner] = useState('');
   const [repoName, setRepoName] = useState('');
   const [githubToken, setGithubToken] = useState('');
-  const navigate = useNavigate(); // For navigation to the dashboard
-const location = useLocation();
+  const navigate = useNavigate(); 
+
   useEffect(() => {
-    const token = Cookies.get('githubToken'); // Retrieve token from cookies
-    console.log(token) // Check if token is retrieved
+    const token = Cookies.get('githubToken'); // Automatically retrieve token from cookies
+    console.log(token); // Check if token is retrieved
     if (token) {
       setGithubToken(token);
     } else {
       console.error('GitHub token not found in cookies');
+      navigate('/login'); // Redirect to login if token is not found
     }
   }, []);
 
@@ -25,7 +24,7 @@ const location = useLocation();
 
   const createWebhook = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/webhook', {
+      const response = await fetch('http://127.0.0.1:5173/api/webhook', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

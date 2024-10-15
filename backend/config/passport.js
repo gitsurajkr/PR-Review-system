@@ -36,6 +36,7 @@ passport.use(new GitHubStrategy({
 }));
 
 passport.serializeUser((user, done) => done(null, user.id));
+console.log('User serialized');
 passport.deserializeUser(async (id, done) => {
     try {
         const user = await User.findById(id);
@@ -44,6 +45,7 @@ passport.deserializeUser(async (id, done) => {
         done(err, null);
     }
 });
+console.log('User deserialized');
 
 
 module.exports = passport;
