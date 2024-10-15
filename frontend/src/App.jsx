@@ -1,33 +1,19 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import LoginCard from '@/components/GithubLoginCard/LoginCard'
-import GithubLogin from '@/components/GithubLogin/GithubLogin'
-import WebhookCard from '@/components/WebhookCard/WebhookCard'
-import Dashboard from './Page/Dashboard/Dashboard'
-import PRsView from './Page/PRsView/PRsView'
-import Analytics  from './Page/Analytics/Analytics'
-import Setting from './Page/Setting/Setting'
-function App() {
+// App.jsx
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import LoginCard from '@/components/GithubLoginCard/LoginCard';
+import WebhookCard from '@/components/WebhookCard/WebhookCard';
+import Dashboard from './Page/Dashboard/Dashboard';
 
+function App() {
   return (
-    <>
-      <LoginCard />
-      {/* <GithubLogin /> */}
-      {/* <WebhookCard /> */}
-      {/* <Dashboard /> */}
-      {/* <PRCard /> */}
-      {/* <Header /> */}
-      {/* <PRStatusDistributionGraph /> */}
-      {/* <TeamPerformance /> */}
-      {/* <PRInfo /> */}
-      {/* <RecentActivities /> */}
-      {/* <PRsView /> */}
-      {/* <Analytics /> */}
-      {/* <Setting /> */}
-    </>
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<LoginCard />} />
+        <Route path="/webhook" element={<WebhookCard />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;
