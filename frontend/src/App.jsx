@@ -7,10 +7,10 @@ function App() {
   return (
     <Router>
       <Routes>
-        {/* <Route path="/" element={<LoginCard />} /> */}
+        <Route path="/" element={<LoginCard />} />
         
         <Route path="/webhook" element={<WebhookCard />} />
-        {/* <Route path="/login" element={<LoginCard />} /> */}
+        <Route path="/login" element={<LoginCard />} />
       </Routes>
     </Router>
   );
