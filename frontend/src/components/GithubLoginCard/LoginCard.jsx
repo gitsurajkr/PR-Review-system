@@ -1,10 +1,12 @@
 import React from "react";
 import { FaGithub } from "react-icons/fa";
+import { Navigate } from "react-router-dom";
 
 function LoginCard() {
     const handleLogin = () => {
         // Redirect to backend's GitHub OAuth endpoint
         window.location.href = "http://localhost:5000/auth/github";
+        Navigate('/webhook');
       };
 
     return (

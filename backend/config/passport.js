@@ -9,11 +9,9 @@ passport.use(new GitHubStrategy({
     callbackURL: process.env.GITHUB_CALLBACK_URL,
 }, async (accessToken, refreshToken, profile, done) => {
     try {
-
         console.log(profile);
         let user = await User.findOne({ githubId: profile.id });
 
-        // If user doesn't exist, create a new user
         if (!user) {
             user = new User({
                 githubId: profile.id,
@@ -30,8 +28,8 @@ passport.use(new GitHubStrategy({
 
         return done(null, user);
     } catch (error) {
-        console.error(error);
-        return done(error);
+        console.error('Error during GitHub strategy:', error);
+        return done(error); // Pass error to done
     }
 }));
 

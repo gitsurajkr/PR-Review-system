@@ -1,28 +1,28 @@
+// routes/webhook.js
 const express = require('express');
 const router = express.Router();
-const authMiddleware = require('../middleware/authMiddleware'); // Ensure this middleware is in place
+const authMiddleware = require('../middleware/authMiddleware'); // Middleware for authentication
 const axios = require('axios');
-const User = require('../models/User'); // Assuming you have a User model
-const cookieParser = require('cookie-parser'); // CHANGED
+const cookieParser = require('cookie-parser'); // Middleware to parse cookies
 
-router.use(cookieParser()); // CHANGED
+router.use(cookieParser()); // Use cookie parser middleware
 
 // Create Webhook
 router.post('/', authMiddleware, async (req, res) => {
     const { repoOwner, repoName } = req.body;
 
+    // Check for required fields
     if (!repoOwner || !repoName) {
         return res.status(400).json({ message: 'Repository owner and name are required.' });
     }
 
-    const githubToken = req.cookies.githubToken; // CHANGED: Get the token directly from cookies
+    const githubToken = req.cookies.githubToken; // Get the token from cookies
 
     if (!githubToken) {
-        return res.status(401).json({ message: 'User not authenticated or token missing.' }); // CHANGED
+        return res.status(401).json({ message: 'User not authenticated or token missing.' });
     }
 
-    // Create webhook
-    const webhookUrl = process.env.GITHUB_WEBHOOK_URL; // Your ngrok URL should be set here
+    const webhookUrl = process.env.WEBHOOK_URL; // Ensure this is set in your .env
 
     try {
         const response = await axios.post(`https://api.github.com/repos/${repoOwner}/${repoName}/hooks`, {
