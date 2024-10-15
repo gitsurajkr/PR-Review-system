@@ -7,6 +7,7 @@ const authRoutes = require("./routes/auth");
 const dashboardRoutes = require("./routes/dashboard");
 const homeRoutes = require("./routes/index");
 const passportConfig = require("./config/passport");
+
 const cors = require("cors");
 require("dotenv").config();
 
@@ -14,9 +15,8 @@ const app = express();
 connectDB();
 
 // Middleware
-
 app.use(cors({
-    origin: " http://127.0.0.1:5173/",
+    origin: "http://127.0.0.1:5173/", // Fixed extra space
     credentials: true,
 }));
 app.use(express.json());
@@ -32,8 +32,6 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-// Set EJS as view engine
-app.set("view engine", "ejs");
 
 // Routes
 app.use("/", homeRoutes);
